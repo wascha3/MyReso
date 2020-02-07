@@ -1,0 +1,77 @@
+:host {
+    .mat-icon {
+        vertical-align:  middle;
+        margin-right:20 px;
+
+    }
+}
+
+.profile-card {
+    text-align: center;
+    padding: 0 20px 20px 20px  ;
+    img {
+        width:100px;
+        height:100px;
+        object-fit :cover;
+        border-radius: 50%;
+    }
+
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+mat-sidenav {
+  width: 250px;;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.with-bg {
+
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  max-height: 130px;
+}
+
+.no-shadow {
+  box-shadow: none !important;
+}
+
+::ng-deep .mat-expansion-panel-body {
+  padding: 0px !important;
+  padding-left: 8px !important;
+}
+
+
+
+.bottom-to-top {
+  border: 0px;
+  border-right: 0px;
+  border-style: solid;
+  border-image:
+  linear-gradient(to top, #c1c1c1, rgba(0, 0, 0, 0)) 1 100%
+}
+
+.mat-expansion-panel-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 17px;
+  border-radius: inherit;
+}

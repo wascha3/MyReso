@@ -4,22 +4,19 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DefaultModule } from './layouts/default/default.module';
-  
- 
+import { CoreModule } from './core/core.module';
+import {TableModule} from 'primeng/table';
 
 @NgModule({
   declarations: [
     AppComponent,
- 
-  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule, 
-    DefaultModule
-
+    BrowserAnimationsModule,
+    CoreModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

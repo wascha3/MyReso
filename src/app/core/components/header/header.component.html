@@ -1,0 +1,36 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="toggleSideBar()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span [routerLink]="['']"> Pizzeria LOGO</span>
+    <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+      <ul fxLayout="row" fxLayoutGap="20px">
+        <button mat-button [matMenuTriggerFor]="menu">
+          <mat-icon>person_outline</mat-icon>
+          User
+        </button>
+        <mat-menu #menu="matMenu">
+          <button class="profile-picture" mat-menu-item>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/512px-Circle-icons-profile.svg.png"
+            />
+          </button>
+          <mat-divider></mat-divider>
+          <button style="height: auto;" mat-menu-item>
+            <div>M username</div>
+            <div>Pizzeria Owner</div>
+
+          </button>
+          <mat-divider></mat-divider>
+          <button mat-menu-item>
+            <div class="sign-out-btn">
+                <button mat-stroked-button>Sign out</button>
+                <button mat-stroked-button>Settings</button>
+            </div>
+          </button>
+        </mat-menu>
+      </ul>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

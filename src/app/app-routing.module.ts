@@ -1,21 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DefaultComponent } from './layouts/default/default.component';
-import { DashboardComponent } from './modules/dashboard/dashboard.component';
-import { PostsComponent } from './modules/posts/posts.component';
+import { DashboardComponent } from './core/components/dashboard/dashboard.component';
 
-
-const routes: Routes = [{
-  path:'',
-  component: DefaultComponent, 
-  children : [{
+const routes: Routes = [
+  {
     path: '',
     component: DashboardComponent
-  }, {
-    path: 'posts', 
-    component: PostsComponent
-  }]
-}];
+  },
+  {
+    path: 'products',
+    loadChildren: () => import('./modules/products/products.module').then(m => m.ProductsModule)
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

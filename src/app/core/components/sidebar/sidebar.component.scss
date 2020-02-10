@@ -75,3 +75,8 @@ mat-sidenav {
   padding: 17px;
   border-radius: inherit;
 }
+
+.mat-list-base[dense] {
+  padding: 15px;
+  display: block;
+}
